@@ -8,13 +8,10 @@
 </head>
 <body>
 
-<header>
-  <div class="header-top">
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Logo" class="site-logo">
     <h1 class="site-name">ClassAverage</h1>
-    <div id="userProfile">
-      <span id="userName">Bonjour, Élève</span>
-    </div>
-    <button id="toggleTheme" title="Mode sombre">Mode Sombre</button>
   </div>
 </header>
 
@@ -35,8 +32,15 @@
   </div>
 </main>
 
-<footer>
-  <p>Développé par <strong>aY Hack</strong> — ClassAverage © 2025</p>
+<footer class="site-footer">
+  <div class="footer-left">
+    <img id="userAvatar" src="avatar-placeholder.png" alt="Avatar" class="avatar">
+    <span id="userNameFooter">Salut, Élève</span>
+  </div>
+  <div class="footer-right">
+    <button id="toggleTheme" title="Mode sombre">Mode Sombre</button>
+    <p class="site-intro">Bienvenue sur ClassAverage, votre outil pour calculer facilement vos moyennes.</p>
+  </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
