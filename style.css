@@ -1,53 +1,20 @@
 * { box-sizing: border-box; }
-body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background: linear-gradient(135deg,#0f766e,#1e3a8a); color:#fff; }
+body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-gradient(135deg,#0f766e,#1e3a8a); color:#fff; }
 
 /* HEADER */
-.site-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg,#0f766e,#1e3a8a);
-}
-
-.header-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
+.site-header { display:flex; flex-direction:column; align-items:center; padding:20px; position:relative; }
+.header-center { display:flex; align-items:center; justify-content:center; gap:15px; }
 .site-logo { width:60px; height:60px; }
 .site-name { font-size:2.2rem; font-weight:bold; }
 
-.header-left {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:5px;
-}
-
+.header-left { position:absolute; left:20px; top:20px; display:flex; flex-direction:column; align-items:center; gap:5px; }
 .avatar { width:50px; height:50px; border-radius:50%; border:2px solid #fff; }
 #userNameHeader { font-weight:bold; font-size:1rem; }
 
-.header-right {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
+.header-right { position:absolute; right:20px; top:20px; }
 .toggle-img { width:40px; height:40px; cursor:pointer; }
 
-.site-intro {
-  margin-top: 15px;
-  font-size:0.9rem;
-  color:#d1d5db;
-  text-align: center;
-}
+.site-intro { margin-top:15px; font-size:0.9rem; color:#d1d5db; text-align:center; }
 
 /* MAIN */
 main { max-width:900px; margin:auto; padding:20px; }
@@ -64,27 +31,11 @@ main { max-width:900px; margin:auto; padding:20px; }
 }
 .card:hover { transform: translateY(-5px); }
 .card h3 { margin:0 0 10px; color:#0f766e; font-weight:bold; }
-.card input {
-  width:100%;
-  padding:8px;
-  margin-bottom:10px;
-  border-radius:8px;
-  border:1px solid #cbd5e1;
-  font-size:0.95rem;
-}
+.card input { width:100%; padding:8px; margin-bottom:10px; border-radius:8px; border:1px solid #cbd5e1; font-size:0.95rem; }
 
 /* ACTIONS */
 .actions { display:flex; justify-content:center; gap:15px; margin:25px 0; flex-wrap:wrap; }
-button {
-  padding:12px 18px;
-  border-radius:8px;
-  border:none;
-  background:#0f766e;
-  color:#fff;
-  cursor:pointer;
-  font-weight:bold;
-  transition: 0.2s;
-}
+button { padding:12px 18px; border:none; border-radius:8px; background:#0f766e; color:#fff; font-weight:bold; cursor:pointer; transition:0.2s; }
 button:hover { background:#0d9488; }
 
 /* RESULT */
