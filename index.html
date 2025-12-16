@@ -3,37 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClassAverage – Connexion</title>
-  <link rel="stylesheet" href="login.css">
+  <title>ClassAverage – 1ère A4</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <div class="login-box">
-      <h1>ClassAverage</h1>
-      <p class="login-message">Veuillez entrer vos informations pour continuer.</p>
 
-      <form id="loginForm">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" required>
+<header class="site-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Logo" class="site-logo">
+    <h1 class="site-name">ClassAverage</h1>
+  </div>
+</header>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" required>
+<main>
+  <section id="cardsContainer">
+    <!-- Les cartes de matières générées ici -->
+  </section>
 
-        <label>Sexe :</label>
-        <div class="radio-group">
-          <label><input type="radio" name="sexe" value="M" required> M</label>
-          <label><input type="radio" name="sexe" value="F"> F</label>
-        </div>
-
-        <button type="submit">Entrer dans le site</button>
-      </form>
-    </div>
+  <div class="actions">
+    <button id="calculerBtn">Calculer la moyenne générale</button>
+    <button id="exportImageBtn">Télécharger en image</button>
+    <button id="exportPDFBtn">Télécharger PDF</button>
   </div>
 
-  <footer>
-    <p>Développé par <strong>aY Hack</strong> — ClassAverage © 2025</p>
-  </footer>
+  <div class="result">
+    <h2>Moyenne Générale</h2>
+    <span id="moyenneGenerale">—</span>
+  </div>
+</main>
 
-  <script src="login.js"></script>
+<footer class="site-footer">
+  <div class="footer-left">
+    <img id="userAvatar" src="avatar-placeholder.png" alt="Avatar" class="avatar">
+    <span id="userNameFooter">Salut, Élève</span>
+  </div>
+  <div class="footer-right">
+    <button id="toggleTheme" title="Mode sombre">Mode Sombre</button>
+    <p class="site-intro">Bienvenue sur ClassAverage, votre outil pour calculer facilement vos moyennes.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
