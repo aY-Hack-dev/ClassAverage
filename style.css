@@ -1,30 +1,38 @@
-/* GLOBAL */
 * { box-sizing: border-box; }
 body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-gradient(135deg,#0f766e,#1e3a8a); color:#fff; }
 
 /* HEADER */
-header { padding:16px; }
-.header-top { display:flex; justify-content: space-between; align-items:center; gap:10px; flex-wrap: wrap; }
-.site-name { font-size:1.5rem; font-weight:bold; color:#fff; }
-#userProfile { font-size:1rem; font-weight:bold; color:#fff; }
-#toggleTheme { padding:6px 12px; border:none; border-radius:6px; background:#0f766e; color:#fff; cursor:pointer; }
-#toggleTheme:hover { background:#0d9488; }
+.site-header { display:flex; justify-content:space-between; align-items:center; padding:15px; flex-wrap:wrap; gap:10px; }
+.header-left { display:flex; align-items:center; gap:10px; }
+.site-logo { width:50px; height:50px; }
+.site-name { font-size:1.8rem; font-weight:bold; }
+
+.header-right { display:flex; align-items:center; gap:15px; flex-wrap:wrap; }
+#userProfile { display:flex; align-items:center; gap:10px; }
+.avatar { width:50px; height:50px; border-radius:50%; }
+.user-info { display:flex; flex-direction:column; }
+#userNameHeader { font-weight:bold; font-size:1rem; }
+.site-intro { font-size:0.85rem; color:#d1d5db; margin:0; }
 
 /* MAIN */
 main { max-width:900px; margin:auto; padding:15px; }
-#cardsContainer { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
-.card { background:#fff; color:#0f172a; padding:20px; border-radius:12px; width:250px; box-shadow:0 5px 15px rgba(0,0,0,0.15);}
+#cardsContainer { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; justify-items:center; }
+
+.card { background:#fff; color:#0f172a; padding:20px; border-radius:12px; width:100%; box-shadow:0 5px 15px rgba(0,0,0,0.15);}
 .card h3 { margin:0 0 10px; color:#0f766e; }
 .card input { width:100%; padding:6px; margin-bottom:8px; border-radius:6px; border:1px solid #cbd5e1; }
 
+/* ACTIONS */
 .actions { display:flex; justify-content:center; gap:10px; margin:20px 0; flex-wrap:wrap; }
 button { padding:10px 15px; border-radius:6px; border:none; background:#0f766e; color:#fff; cursor:pointer; }
 button:hover { background:#0d9488; }
 
+/* RESULT */
 .result { text-align:center; margin-top:20px; }
 .result span { font-size:2.2rem; font-weight:bold; color:#0f766e; }
 
-footer { text-align:center; padding:15px; font-size:0.85rem; background:#0f172a; color:#fff; }
+/* FOOTER */
+.site-footer { text-align:center; padding:15px; background:#0f172a; font-size:0.85rem; color:#fff; }
 
 /* MODE SOMBRE */
 .dark body { background:#020617; color:#e5e7eb; }
