@@ -10,29 +10,27 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
   position:relative;
 }
 
-.header-center {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-}
-
-.site-logo { width:60px; height:60px; }
-
+/* TITRE EN HAUT */
 .site-name {
   font-family: 'Poppins', sans-serif; /* police Google */
   font-size:2.4rem;
   font-weight:bold;
+  margin-bottom:15px;
+}
+
+/* PROFIL ET TOGGLE SOUS LE TITRE */
+.header-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  max-width:900px;
 }
 
 .header-left {
-  position:absolute;
-  left:20px;
-  top:20px;
   display:flex;
-  flex-direction:column;
   align-items:center;
-  gap:5px;
+  gap:10px;
 }
 
 .avatar {
@@ -45,14 +43,10 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
 #userNameHeader {
   font-weight:bold;
   font-size:1rem;
-  text-align:center;
 }
 
-.header-right {
-  position:absolute;
-  right:20px;
-  top:20px;
-}
+/* TOGGLE */
+.header-right { }
 
 .toggle-img {
   width:50px;
@@ -157,7 +151,7 @@ button:hover { background:#0d9488; }
 @media(max-width:600px){
   .site-name { font-size:1.8rem; }
   .toggle-img { width:40px; height:40px; }
-  .header-left { top:10px; left:10px; }
-  .header-right { top:10px; right:10px; }
+  .header-row { flex-direction:column; align-items:center; gap:10px; }
+  .header-left { gap:5px; }
   .card { padding:15px; }
 }
