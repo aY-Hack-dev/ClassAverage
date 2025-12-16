@@ -5,8 +5,7 @@ const matieres=[
 
 const cardsContainer=document.getElementById("cardsContainer");
 const user=JSON.parse(localStorage.getItem("user"));
-
-if(!user) window.location.href="login.html";
+if(!user) window.location.href="index.html";
 
 document.getElementById("userNameHeader").textContent = `Salut, ${user.prenom}`;
 document.getElementById("userAvatar").src = user.avatar || "avatar-placeholder.png";
@@ -25,7 +24,6 @@ matieres.forEach((m,i)=>{
   `;
   cardsContainer.appendChild(card);
 
-  // Calcul automatique par matière
   ["d1-"+i,"d2-"+i,"comp-"+i].forEach(id=>{
     document.getElementById(id).addEventListener("input", ()=> {
       const d1 = document.getElementById(`d1-${i}`).value;
