@@ -5,9 +5,13 @@ const matieres=[
 
 const cardsContainer=document.getElementById("cardsContainer");
 const user=JSON.parse(localStorage.getItem("user"));
-if(user) document.getElementById("userName").textContent=`Bonjour, ${user.prenom} ${user.nom}`;
 
-// Génération cartes
+if(!user) window.location.href="login.html";
+
+document.getElementById("userNameHeader").textContent = `Salut, ${user.prenom}`;
+document.getElementById("userAvatar").src = user.avatar || "avatar-placeholder.png";
+
+// Génération des cartes
 matieres.forEach((m,i)=>{
   const card=document.createElement("div");
   card.className="card";
@@ -20,30 +24,39 @@ matieres.forEach((m,i)=>{
     <p>Pondéré: <span id="pond-${i}">—</span></p>
   `;
   cardsContainer.appendChild(card);
+
+  // Calcul automatique par matière
+  ["d1-"+i,"d2-"+i,"comp-"+i].forEach(id=>{
+    document.getElementById(id).addEventListener("input", ()=> {
+      const d1 = document.getElementById(`d1-${i}`).value;
+      const d2 = document.getElementById(`d2-${i}`).value;
+      const comp = document.getElementById(`comp-${i}`).value;
+      if(d1 && d2 && comp){
+        const moyD=((+d1 + +d2)*0.4)/2;
+        const moyC=+comp*0.6;
+        const moy=moyD+moyC;
+        const p=moy*m.coef;
+        document.getElementById(`moy-${i}`).textContent=moy.toFixed(2);
+        document.getElementById(`pond-${i}`).textContent=p.toFixed(2);
+      } else {
+        document.getElementById(`moy-${i}`).textContent="—";
+        document.getElementById(`pond-${i}`).textContent="—";
+      }
+    });
+  });
 });
 
-// Calcul
+// Calcul général uniquement via bouton
 document.getElementById("calculerBtn").onclick=()=>{
   let total=0,valide=false;
   matieres.forEach((m,i)=>{
-    const d1=document.getElementById(`d1-${i}`).value;
-    const d2=document.getElementById(`d2-${i}`).value;
-    const comp=document.getElementById(`comp-${i}`).value;
-    if(d1 && d2 && comp){
+    const p = document.getElementById(`pond-${i}`).textContent;
+    if(p && p!=="—"){
       valide=true;
-      const moyD=((+d1 + +d2)*0.4)/2;
-      const moyC=+comp*0.6;
-      const moy=moyD+moyC;
-      const p=moy*m.coef;
-      document.getElementById(`moy-${i}`).textContent=moy.toFixed(2);
-      document.getElementById(`pond-${i}`).textContent=p.toFixed(2);
-      total+=p;
-    }else{
-      document.getElementById(`moy-${i}`).textContent="—";
-      document.getElementById(`pond-${i}`).textContent="—";
+      total += parseFloat(p);
     }
   });
-  document.getElementById("moyenneGenerale").textContent=valide?(total/24).toFixed(2):"—";
+  document.getElementById("moyenneGenerale").textContent = valide ? (total/24).toFixed(2) : "—";
 };
 
 // Mode sombre
