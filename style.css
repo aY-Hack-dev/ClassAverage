@@ -23,8 +23,8 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
 }
 
 .toggle-img {
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
   cursor: pointer;
   transition: transform 0.2s;
 }
