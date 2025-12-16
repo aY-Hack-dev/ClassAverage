@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassAverage – 1ère A4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <h1 class="site-name">ClassAverage</h1>
+    <div id="userProfile">
+      <span id="userName">Bonjour, Élève</span>
+    </div>
+    <button id="toggleTheme" title="Mode sombre">Mode Sombre</button>
+  </div>
+</header>
+
+<main>
+  <section id="cardsContainer">
+    <!-- Les cartes de matières générées ici -->
+  </section>
+
+  <div class="actions">
+    <button id="calculerBtn">Calculer la moyenne générale</button>
+    <button id="exportImageBtn">Télécharger en image</button>
+    <button id="exportPDFBtn">Télécharger PDF</button>
+  </div>
+
+  <div class="result">
+    <h2>Moyenne Générale</h2>
+    <span id="moyenneGenerale">—</span>
+  </div>
+</main>
+
+<footer>
+  <p>Développé par <strong>aY Hack</strong> — ClassAverage © 2025</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
