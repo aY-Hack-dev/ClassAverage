@@ -12,9 +12,9 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
 
 .site-name {
   font-family: 'Poppins', sans-serif; /* police Google */
-  font-size:2.4rem;
+  font-size:2.5rem;
   font-weight:bold;
-  margin-bottom:15px;
+  margin-bottom:20px;
 }
 
 .header-row {
@@ -156,8 +156,8 @@ button:hover { background:#0d9488; }
 
 /* RESPONSIVE */
 @media(max-width:600px){
-  .site-name { font-size:1.8rem; }
-  .toggle-img { width:40px; height:40px; }
+  .site-name { font-size:2.5rem; }
+  .toggle-img { width:50px; height:50px; }
   .header-row { flex-direction:column; align-items:center; gap:10px; }
   .header-left { gap:5px; }
   .card { padding:15px; }
