@@ -10,7 +10,6 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
   position:relative;
 }
 
-/* TITRE EN HAUT */
 .site-name {
   font-family: 'Poppins', sans-serif; /* police Google */
   font-size:2.4rem;
@@ -18,13 +17,13 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
   margin-bottom:15px;
 }
 
-/* PROFIL ET TOGGLE SOUS LE TITRE */
 .header-row {
   display:flex;
   justify-content:space-between;
   align-items:center;
   width:100%;
   max-width:900px;
+  margin-bottom:10px;
 }
 
 .header-left {
@@ -45,7 +44,6 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
   font-size:1rem;
 }
 
-/* TOGGLE */
 .header-right { }
 
 .toggle-img {
@@ -56,6 +54,15 @@ body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:linear-grad
 }
 
 .toggle-img:hover { transform: scale(1.1); }
+
+/* DESCRIPTION DU SITE */
+.site-intro {
+  font-size:0.95rem;
+  color:#d1d5db;
+  text-align:center;
+  max-width:700px;
+  margin-bottom:15px;
+}
 
 /* MAIN */
 main {
