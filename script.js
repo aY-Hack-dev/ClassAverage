@@ -83,3 +83,15 @@ document.getElementById("exportPDFBtn").onclick=()=>{
     pdf.save(`ClassAverage_${user.prenom}_${user.nom}.pdf`);
   });
 };
+const toggle = document.getElementById("toggleTheme");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  // Changement d'icône selon le mode
+  if(document.body.classList.contains("dark")){
+    toggle.src = "moon-icon.png"; // mode sombre
+  } else {
+    toggle.src = "sun-icon.png";  // mode clair
+  }
+});
