@@ -4,35 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ClassAverage – Connexion</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="style-login.css">
 </head>
 <body>
-  <div class="login-container">
-    <div class="login-box">
-      <h1>ClassAverage</h1>
-      <p class="login-message">Veuillez entrer vos informations pour continuer.</p>
-
-      <form id="loginForm">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" required>
-
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" required>
-
-        <label>Sexe :</label>
-        <div class="radio-group">
-          <label><input type="radio" name="sexe" value="M" required> M</label>
-          <label><input type="radio" name="sexe" value="F"> F</label>
-        </div>
-
-        <button type="submit">Entrer dans le site</button>
-      </form>
-    </div>
-  </div>
-
-  <footer>
-    <p>Développé par <strong>aY Hack</strong> — ClassAverage © 2025</p>
-  </footer>
+  <main class="login-container">
+    <h1>Entrez vos informations pour continuer</h1>
+    <form id="loginForm">
+      <input type="text" id="nom" placeholder="Nom" required>
+      <input type="text" id="prenom" placeholder="Prénom" required>
+      <label>
+        Sexe:
+        <select id="sexe" required>
+          <option value="">--Choisir--</option>
+          <option value="M">M</option>
+          <option value="F">F</option>
+        </select>
+      </label>
+      <label>
+        Avatar:
+        <input type="file" id="avatar" accept="image/*">
+      </label>
+      <button type="submit">Entrer dans le site</button>
+    </form>
+  </main>
 
   <script src="login.js"></script>
 </body>
