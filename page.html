@@ -7,29 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-left">
+  <div class="header-center">
     <img src="logo.png" alt="Logo" class="site-logo">
     <h1 class="site-name">ClassAverage</h1>
   </div>
 
-  <div class="header-right">
-    <div id="userProfile">
-      <img id="userAvatar" src="avatar-placeholder.png" alt="Avatar" class="avatar">
-      <div class="user-info">
-        <span id="userNameHeader">Salut, Élève</span>
-        <p class="site-intro">Bienvenue sur ClassAverage, votre outil pour calculer facilement vos moyennes.</p>
-      </div>
-    </div>
-    <button id="toggleTheme" title="Mode sombre">Mode Sombre</button>
+  <div class="header-left">
+    <img id="userAvatar" src="avatar-placeholder.png" alt="Avatar" class="avatar">
+    <span id="userNameHeader">Salut, Élève</span>
   </div>
+
+  <div class="header-right">
+    <img id="toggleTheme" src="toggle-icon.png" alt="Mode sombre" title="Mode sombre" class="toggle-img">
+  </div>
+
+  <p class="site-intro">Bienvenue sur ClassAverage, votre outil pour calculer facilement vos moyennes.</p>
 </header>
 
 <main>
-  <section id="cardsContainer">
-    <!-- Les cartes de matières générées ici -->
-  </section>
+  <section id="cardsContainer"></section>
 
   <div class="actions">
     <button id="calculerBtn">Calculer la moyenne générale</button>
